@@ -27,17 +27,18 @@ connection.once("open", () => {
 })
 
 
-//instructor
+//supplier
 
-const instructorRouter = require("./routes/instructorRoutes/instructors.js");
 
-app.use("/instructor",instructorRouter);
+const packRouter = require("./routes/packRoutes/packs.js");
 
-//workshop
+app.use("/pack",packRouter);
 
-const workshopRouter = require("./routes/workshopRoutes/workshops.js");
+const paymentRouter = require("./routes/paymentRouts/payments.js");
 
-app.use("/workshop",workshopRouter);
+app.use("/payment",paymentRouter);
+
+
 
 
 app.listen(PORT, () => {
