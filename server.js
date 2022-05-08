@@ -27,17 +27,19 @@ connection.once("open", () => {
 })
 
 
+
+
 //supplier
 
+const supplierRouter = require("./routes/supplierRoutes/suppliers.js");
 
-const packRouter = require("./routes/packRoutes/packs.js");
+app.use("/supplier",supplierRouter);
 
-app.use("/pack",packRouter);
+//suppliment
 
-const paymentRouter = require("./routes/paymentRouts/payments.js");
+const supplementRouter = require("./routes/supplementRoutes/supplements.js");
 
-app.use("/payment",paymentRouter);
-
+app.use("/supplement",supplementRouter);
 
 
 
